@@ -7,6 +7,12 @@ user_command = input()
 # Check user input
 while user_command != "x":
 
+	if user_command == "u":
+		fred.up()
+
+	if user_command == "i":
+		fred.down()
+
 	if user_command == "r":
 		print("Color will change to RED")
 
@@ -14,16 +20,16 @@ while user_command != "x":
 		print("Color will change to BLUE")
 	
 	if user_command == "w":
-		fred.up(100)
+		fred.forward(100)
 
 	if user_command == "d":
-		fred.left(100)
+		fred.right(90)
 
 	if user_command == "s":
-		fred.down(100)
+		fred.backward(100)
 
 	if user_command == "a":
-		fred.left(100)
+		fred.left(90)
 
 	user_command = input()
 
