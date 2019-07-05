@@ -4,7 +4,7 @@ fred = turtle.Pen()
 # Accept user input
 user_command = input()
 
-# Check user input
+# the maze making/drawing code
 fred.speed(0)
 fred.forward(50)
 fred.right(90)
@@ -78,8 +78,26 @@ fred.down()
 fred.forward(150)
 fred.left(90)
 fred.forward(250)
-fred.right(90)
+fred.up()
+fred.left(90)
 fred.forward(50)
+fred.left(90)
+fred.down()
+fred.forward(200)
+fred.right(180)
+fred.forward(50)
+fred.left(90)
+fred.forward(50)
+fred.up()
+fred.left(180)
+fred.forward(75)
+fred.left(90)
+fred.forward(150)
+fred.right(180)
+
+
+# turtle move/ misc code
+
 while user_command != "x":
 
 	if user_command == "u":
@@ -93,6 +111,7 @@ while user_command != "x":
 
 	if user_command == "b":
 		print("Color will change to BLUE")
+		fred.color("blue")
 	
 	if user_command == "w":
 		fred.forward(25)
