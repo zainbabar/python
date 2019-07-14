@@ -44,7 +44,7 @@ while game_running == True:
             player['health'] = player['health'] + player['heal']
 
             monster_attack = randint(monster['attack_min'], monster['attack_max'])
-            player['health'] = player['health'] - monster['attack']
+            player['health'] = player['health'] - monster_attack
             if player['health'] <= 0:
                 monster_won = True
         
@@ -55,16 +55,16 @@ while game_running == True:
         else: 
             print('Invalid Input' )
 
-    if (player_won == False) and (monster_won == False):
-        print(player['name'] + ' has ' + str(player['health']) + ' left')
-        print(monster['name'] + ' has ' + str(monster['health']) + ' left')
+        if (player_won == False) and (monster_won == False):
+            print(player['name'] + ' has ' + str(player['health']) + ' left')
+            print(monster['name'] + ' has ' + str(monster['health']) + ' left')
 
-    elif player_won:
-        print(player['name'] + ' won')
-        new_round = False
-    
-    elif monster_won:
-        print('The Monster' + ' won' )
-        new_round = False
-    
+        elif player_won:
+            print(player['name'] + ' won')
+            new_round = False
+        
+        elif monster_won:
+            print('The Monster' + ' won' )
+            new_round = False
+        
 #def calculate_monster_attack():
