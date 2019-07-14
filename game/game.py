@@ -36,39 +36,35 @@ while game_running == True:
     
             else:
                 monster_attack = randint(monster['attack_min'], monster['attack_max'])
-                player['health'] = player['health'] - monster['attack']
+                player['health'] = player['health'] - monster_attack
                 if player['health'] <= 0:
                     monster_won = True
     
-    elif player_choice == '2':
-        player['health'] = player['health'] + player['heal']
+        elif player_choice == '2':
+            player['health'] = player['health'] + player['heal']
 
-        player['health'] = player['health'] - monster['attack']
-       if player['health'] <= 0:
-             monster_won = True
+            monster_attack = randint(monster['attack_min'], monster['attack_max'])
+            player['health'] = player['health'] - monster['attack']
+            if player['health'] <= 0:
+                monster_won = True
         
-    
-    elif player_choice == '3':
-        new_round = False
-        game_running = False
+        elif player_choice == '3':
+            new_round = False
+            game_running = False
 
+        else: 
+            print('Invalid Input' )
 
-    else: 
-        print('Invalid Input' )
+    if (player_won == False) and (monster_won == False):
+        print(player['name'] + ' has ' + str(player['health']) + ' left')
+        print(monster['name'] + ' has ' + str(monster['health']) + ' left')
 
-    if player_won == False and monster_won == False:
-        print(player['name'] + ' has ' + str(player['health'] + ' left')
-        print(monster['name'] + ' has' + str(monster['health'] + ' left')
-    
-    elif: player_won:
+    elif player_won:
         print(player['name'] + ' won')
         new_round = False
     
-    elif monster_won
+    elif monster_won:
         print('The Monster' + ' won' )
         new_round = False
-
-
     
-    
-  
+#def calculate_monster_attack():
