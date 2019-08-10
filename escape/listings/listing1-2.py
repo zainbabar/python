@@ -10,7 +10,7 @@ player_y = 350
 def draw():
     screen.blit(images.backdrop, (0, 0))
     screen.blit(images.mars, (50, 50))
-    screen.blit(images.astronaut, player_x, player_y))
+    screen.blit(images.astronaut, (player_x, player_y))
     screen.blit(images.ship, (130, 130))
 
 def game_loop():
