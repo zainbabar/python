@@ -12,7 +12,8 @@ planets = {
 while True:
     query = input("Which planet would you like information on? ")
     if query in planets.keys():
-        print(planets[query])
+        print(planets[query][0])
+        print("Does it have rings?", planets[query][1])
     else:
         print("Databanks empty. Sorry!")
                                                                                                                                                                                                                                                             
